@@ -12,6 +12,30 @@
 		286102CA1ACFD5E800BF1E1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286102C91ACFD5E800BF1E1D /* Images.xcassets */; };
 		286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */; };
 		28BB5FA51ACFE3C200A7B06E /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB5FA41ACFE3C200A7B06E /* RLMSupport.swift */; };
+		28BB5FAA1ACFE68200A7B06E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FA91ACFE68200A7B06E /* MapKit.framework */; };
+		28BB5FAC1ACFE6C600A7B06E /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FAB1ACFE6C600A7B06E /* libsqlite3.dylib */; };
+		28BB5FAE1ACFE74D00A7B06E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FAD1ACFE74D00A7B06E /* AudioToolbox.framework */; };
+		28BB5FB01ACFE75200A7B06E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FAF1ACFE75200A7B06E /* CFNetwork.framework */; };
+		28BB5FB21ACFE75600A7B06E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FB11ACFE75600A7B06E /* CoreGraphics.framework */; };
+		28BB5FB41ACFE75B00A7B06E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FB31ACFE75B00A7B06E /* CoreLocation.framework */; };
+		28BB5FB61ACFE76000A7B06E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FB51ACFE76000A7B06E /* MobileCoreServices.framework */; };
+		28BB5FB81ACFE76500A7B06E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FB71ACFE76500A7B06E /* QuartzCore.framework */; };
+		28BB5FBA1ACFE76B00A7B06E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FB91ACFE76B00A7B06E /* Security.framework */; };
+		28BB5FBC1ACFE76F00A7B06E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FBB1ACFE76F00A7B06E /* StoreKit.framework */; };
+		28BB5FBE1ACFE77600A7B06E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FBD1ACFE77600A7B06E /* SystemConfiguration.framework */; };
+		28BB5FC01ACFE77B00A7B06E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FBF1ACFE77B00A7B06E /* libz.dylib */; };
+		28BB5FC51ACFEAF000A7B06E /* BuyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A221ACFE2FE00A8736C /* BuyView.xib */; };
+		28BB5FC61ACFEAF400A7B06E /* DeliverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A241ACFE30900A8736C /* DeliverView.xib */; };
+		28BB5FC71ACFEAF600A7B06E /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A261ACFE31B00A8736C /* ProfileView.xib */; };
+		28BB5FC81ACFEAF900A7B06E /* PostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A281ACFE32600A8736C /* PostView.xib */; };
+		28BB5FC91ACFEAFB00A7B06E /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A2A1ACFE33200A8736C /* DetailView.xib */; };
+		28BB5FCA1ACFECCE00A7B06E /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A181ACFE26100A8736C /* BuyViewController.swift */; };
+		28BB5FCB1ACFEFF600A7B06E /* DeliverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */; };
+		28BB5FCC1ACFEFF800A7B06E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1C1ACFE28D00A8736C /* ProfileViewController.swift */; };
+		28BB5FCD1ACFEFFA00A7B06E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1E1ACFE2A000A8736C /* PostViewController.swift */; };
+		28BB5FCE1ACFEFFC00A7B06E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A201ACFE2B600A8736C /* DetailViewController.swift */; };
+		28BB5FCF1ACFF00100A7B06E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */; };
+		28BB5FD01ACFF00600A7B06E /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */; };
 		34E2A1270DB30907A1033E14 /* Pods_GrabItForMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8206A1587D32E3679548B9 /* Pods_GrabItForMe.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -23,6 +47,19 @@
 		286102C91ACFD5E800BF1E1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		286102CC1ACFD5E800BF1E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		28BB5FA41ACFE3C200A7B06E /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
+		28BB5FA91ACFE68200A7B06E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		28BB5FAB1ACFE6C600A7B06E /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		28BB5FAD1ACFE74D00A7B06E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		28BB5FAF1ACFE75200A7B06E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		28BB5FB11ACFE75600A7B06E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		28BB5FB31ACFE75B00A7B06E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		28BB5FB51ACFE76000A7B06E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		28BB5FB71ACFE76500A7B06E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		28BB5FB91ACFE76B00A7B06E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		28BB5FBB1ACFE76F00A7B06E /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		28BB5FBD1ACFE77600A7B06E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		28BB5FBF1ACFE77B00A7B06E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		28BB5FC11ACFE7E900A7B06E /* GrabItForMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GrabItForMe-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 		3C418E634CBD9C4CFFF96564 /* Pods-GrabItForMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabItForMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrabItForMe/Pods-GrabItForMe.debug.xcconfig"; sourceTree = "<group>"; };
 		BE8206A1587D32E3679548B9 /* Pods_GrabItForMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrabItForMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C3BBC356775E7A3796B33F /* Pods-GrabItForMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabItForMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrabItForMe/Pods-GrabItForMe.release.xcconfig"; sourceTree = "<group>"; };
@@ -45,6 +82,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BB5FC01ACFE77B00A7B06E /* libz.dylib in Frameworks */,
+				28BB5FBE1ACFE77600A7B06E /* SystemConfiguration.framework in Frameworks */,
+				28BB5FBC1ACFE76F00A7B06E /* StoreKit.framework in Frameworks */,
+				28BB5FBA1ACFE76B00A7B06E /* Security.framework in Frameworks */,
+				28BB5FB81ACFE76500A7B06E /* QuartzCore.framework in Frameworks */,
+				28BB5FB61ACFE76000A7B06E /* MobileCoreServices.framework in Frameworks */,
+				28BB5FB41ACFE75B00A7B06E /* CoreLocation.framework in Frameworks */,
+				28BB5FB21ACFE75600A7B06E /* CoreGraphics.framework in Frameworks */,
+				28BB5FB01ACFE75200A7B06E /* CFNetwork.framework in Frameworks */,
+				28BB5FAE1ACFE74D00A7B06E /* AudioToolbox.framework in Frameworks */,
+				28BB5FAC1ACFE6C600A7B06E /* libsqlite3.dylib in Frameworks */,
+				28BB5FAA1ACFE68200A7B06E /* MapKit.framework in Frameworks */,
 				34E2A1270DB30907A1033E14 /* Pods_GrabItForMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,22 +122,11 @@
 		286102BF1ACFD5E800BF1E1D /* GrabItForMe */ = {
 			isa = PBXGroup;
 			children = (
-				F6522A181ACFE26100A8736C /* BuyViewController.swift */,
-				F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */,
-				F6522A1C1ACFE28D00A8736C /* ProfileViewController.swift */,
-				F6522A1E1ACFE2A000A8736C /* PostViewController.swift */,
-				F6522A201ACFE2B600A8736C /* DetailViewController.swift */,
-				F6522A221ACFE2FE00A8736C /* BuyView.xib */,
-				F6522A241ACFE30900A8736C /* DeliverView.xib */,
-				F6522A261ACFE31B00A8736C /* ProfileView.xib */,
-				F6522A281ACFE32600A8736C /* PostView.xib */,
-				F6522A2A1ACFE33200A8736C /* DetailView.xib */,
+				28BB5FA81ACFE5C500A7B06E /* Controller */,
+				28BB5FA61ACFE5B600A7B06E /* View */,
 				286102C21ACFD5E800BF1E1D /* AppDelegate.swift */,
-				286102C41ACFD5E800BF1E1D /* ViewController.swift */,
-				F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */,
-				F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */,
+				28BB5FC11ACFE7E900A7B06E /* GrabItForMe-Bridging-Header.h */,
 				286102C91ACFD5E800BF1E1D /* Images.xcassets */,
-				286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */,
 				286102C01ACFD5E800BF1E1D /* Supporting Files */,
 			);
 			path = GrabItForMe;
@@ -103,9 +141,49 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		28BB5FA61ACFE5B600A7B06E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */,
+				F6522A221ACFE2FE00A8736C /* BuyView.xib */,
+				F6522A241ACFE30900A8736C /* DeliverView.xib */,
+				F6522A261ACFE31B00A8736C /* ProfileView.xib */,
+				F6522A281ACFE32600A8736C /* PostView.xib */,
+				F6522A2A1ACFE33200A8736C /* DetailView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		28BB5FA81ACFE5C500A7B06E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F6522A181ACFE26100A8736C /* BuyViewController.swift */,
+				F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */,
+				F6522A1C1ACFE28D00A8736C /* ProfileViewController.swift */,
+				F6522A1E1ACFE2A000A8736C /* PostViewController.swift */,
+				F6522A201ACFE2B600A8736C /* DetailViewController.swift */,
+				286102C41ACFD5E800BF1E1D /* ViewController.swift */,
+				F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */,
+				F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		856280F78BD7100FF50732BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28BB5FBF1ACFE77B00A7B06E /* libz.dylib */,
+				28BB5FBD1ACFE77600A7B06E /* SystemConfiguration.framework */,
+				28BB5FBB1ACFE76F00A7B06E /* StoreKit.framework */,
+				28BB5FB91ACFE76B00A7B06E /* Security.framework */,
+				28BB5FB71ACFE76500A7B06E /* QuartzCore.framework */,
+				28BB5FB51ACFE76000A7B06E /* MobileCoreServices.framework */,
+				28BB5FB31ACFE75B00A7B06E /* CoreLocation.framework */,
+				28BB5FB11ACFE75600A7B06E /* CoreGraphics.framework */,
+				28BB5FAF1ACFE75200A7B06E /* CFNetwork.framework */,
+				28BB5FAD1ACFE74D00A7B06E /* AudioToolbox.framework */,
+				28BB5FAB1ACFE6C600A7B06E /* libsqlite3.dylib */,
+				28BB5FA91ACFE68200A7B06E /* MapKit.framework */,
 				BE8206A1587D32E3679548B9 /* Pods_GrabItForMe.framework */,
 			);
 			name = Frameworks;
@@ -181,12 +259,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */,
-				F6522A271ACFE31B00A8736C /* ProfileView.xib in Resources */,
-				F6522A291ACFE32600A8736C /* PostView.xib in Resources */,
-				F6522A231ACFE2FE00A8736C /* BuyView.xib in Resources */,
-				F6522A251ACFE30900A8736C /* DeliverView.xib in Resources */,
+				28BB5FC71ACFEAF600A7B06E /* ProfileView.xib in Resources */,
+				28BB5FC81ACFEAF900A7B06E /* PostView.xib in Resources */,
+				28BB5FC51ACFEAF000A7B06E /* BuyView.xib in Resources */,
+				28BB5FC61ACFEAF400A7B06E /* DeliverView.xib in Resources */,
 				286102CA1ACFD5E800BF1E1D /* Images.xcassets in Resources */,
-				F6522A2B1ACFE33200A8736C /* DetailView.xib in Resources */,
+				28BB5FC91ACFEAFB00A7B06E /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,13 +323,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6522A211ACFE2B600A8736C /* DetailViewController.swift in Sources */,
-				F6522A1F1ACFE2A000A8736C /* PostViewController.swift in Sources */,
-				F6522A131ACFE1CE00A8736C /* WelcomeViewController.swift in Sources */,
-				F6522A191ACFE26100A8736C /* BuyViewController.swift in Sources */,
+				28BB5FCF1ACFF00100A7B06E /* WelcomeViewController.swift in Sources */,
+				28BB5FCC1ACFEFF800A7B06E /* ProfileViewController.swift in Sources */,
 				286102C51ACFD5E800BF1E1D /* ViewController.swift in Sources */,
+				28BB5FCD1ACFEFFA00A7B06E /* PostViewController.swift in Sources */,
+				28BB5FCA1ACFECCE00A7B06E /* BuyViewController.swift in Sources */,
 				28BB5FA51ACFE3C200A7B06E /* RLMSupport.swift in Sources */,
+				28BB5FD01ACFF00600A7B06E /* ProfileTableViewController.swift in Sources */,
 				286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */,
+				28BB5FCB1ACFEFF600A7B06E /* DeliverViewController.swift in Sources */,
+				28BB5FCE1ACFEFFC00A7B06E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,10 +432,13 @@
 			baseConfigurationReference = 3C418E634CBD9C4CFFF96564 /* Pods-GrabItForMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GrabItForMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GrabItForMe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -363,10 +447,12 @@
 			baseConfigurationReference = E9C3BBC356775E7A3796B33F /* Pods-GrabItForMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GrabItForMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "GrabItForMe-Bridging-Header.h";
 			};
 			name = Release;
 		};

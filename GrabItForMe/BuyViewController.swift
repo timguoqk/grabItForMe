@@ -6,4 +6,19 @@
 //  Copyright (c) 2015 ZJG. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class BuyViewController: UIViewController {
+    
+    override init() {
+        super.init(nibName: "BuyView", bundle: nil)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+}
