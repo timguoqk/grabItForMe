@@ -9,9 +9,20 @@
 /* Begin PBXBuildFile section */
 		286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286102C21ACFD5E800BF1E1D /* AppDelegate.swift */; };
 		286102C51ACFD5E800BF1E1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286102C41ACFD5E800BF1E1D /* ViewController.swift */; };
-		286102C81ACFD5E800BF1E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286102C61ACFD5E800BF1E1D /* Main.storyboard */; };
 		286102CA1ACFD5E800BF1E1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286102C91ACFD5E800BF1E1D /* Images.xcassets */; };
 		286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */; };
+		F6522A131ACFE1CE00A8736C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */; };
+		F6522A151ACFE20E00A8736C /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */; };
+		F6522A191ACFE26100A8736C /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A181ACFE26100A8736C /* BuyViewController.swift */; };
+		F6522A1B1ACFE27300A8736C /* DeliverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */; };
+		F6522A1D1ACFE28D00A8736C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1C1ACFE28D00A8736C /* ProfileViewController.swift */; };
+		F6522A1F1ACFE2A000A8736C /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1E1ACFE2A000A8736C /* PostViewController.swift */; };
+		F6522A211ACFE2B600A8736C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A201ACFE2B600A8736C /* DetailViewController.swift */; };
+		F6522A231ACFE2FE00A8736C /* BuyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A221ACFE2FE00A8736C /* BuyView.xib */; };
+		F6522A251ACFE30900A8736C /* DeliverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A241ACFE30900A8736C /* DeliverView.xib */; };
+		F6522A271ACFE31B00A8736C /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A261ACFE31B00A8736C /* ProfileView.xib */; };
+		F6522A291ACFE32600A8736C /* PostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A281ACFE32600A8736C /* PostView.xib */; };
+		F6522A2B1ACFE33200A8736C /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A2A1ACFE33200A8736C /* DetailView.xib */; };
 		FB4CEAE472E032658D4E77EB /* libPods-GrabItForMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DC7E98E7D3223044A2D65 /* libPods-GrabItForMe.a */; };
 /* End PBXBuildFile section */
 
@@ -20,12 +31,23 @@
 		286102C11ACFD5E800BF1E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286102C21ACFD5E800BF1E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		286102C41ACFD5E800BF1E1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		286102C71ACFD5E800BF1E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		286102C91ACFD5E800BF1E1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		286102CC1ACFD5E800BF1E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3C418E634CBD9C4CFFF96564 /* Pods-GrabItForMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabItForMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrabItForMe/Pods-GrabItForMe.debug.xcconfig"; sourceTree = "<group>"; };
 		A57DC7E98E7D3223044A2D65 /* libPods-GrabItForMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GrabItForMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C3BBC356775E7A3796B33F /* Pods-GrabItForMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabItForMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrabItForMe/Pods-GrabItForMe.release.xcconfig"; sourceTree = "<group>"; };
+		F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		F6522A181ACFE26100A8736C /* BuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliverViewController.swift; sourceTree = "<group>"; };
+		F6522A1C1ACFE28D00A8736C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F6522A1E1ACFE2A000A8736C /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		F6522A201ACFE2B600A8736C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F6522A221ACFE2FE00A8736C /* BuyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyView.xib; sourceTree = "<group>"; };
+		F6522A241ACFE30900A8736C /* DeliverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliverView.xib; sourceTree = "<group>"; };
+		F6522A261ACFE31B00A8736C /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
+		F6522A281ACFE32600A8736C /* PostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostView.xib; sourceTree = "<group>"; };
+		F6522A2A1ACFE33200A8736C /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +83,20 @@
 		286102BF1ACFD5E800BF1E1D /* GrabItForMe */ = {
 			isa = PBXGroup;
 			children = (
+				F6522A181ACFE26100A8736C /* BuyViewController.swift */,
+				F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */,
+				F6522A1C1ACFE28D00A8736C /* ProfileViewController.swift */,
+				F6522A1E1ACFE2A000A8736C /* PostViewController.swift */,
+				F6522A201ACFE2B600A8736C /* DetailViewController.swift */,
+				F6522A221ACFE2FE00A8736C /* BuyView.xib */,
+				F6522A241ACFE30900A8736C /* DeliverView.xib */,
+				F6522A261ACFE31B00A8736C /* ProfileView.xib */,
+				F6522A281ACFE32600A8736C /* PostView.xib */,
+				F6522A2A1ACFE33200A8736C /* DetailView.xib */,
 				286102C21ACFD5E800BF1E1D /* AppDelegate.swift */,
 				286102C41ACFD5E800BF1E1D /* ViewController.swift */,
-				286102C61ACFD5E800BF1E1D /* Main.storyboard */,
+				F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */,
+				F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */,
 				286102C91ACFD5E800BF1E1D /* Images.xcassets */,
 				286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */,
 				286102C01ACFD5E800BF1E1D /* Supporting Files */,
@@ -155,9 +188,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				286102C81ACFD5E800BF1E1D /* Main.storyboard in Resources */,
 				286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */,
+				F6522A271ACFE31B00A8736C /* ProfileView.xib in Resources */,
+				F6522A291ACFE32600A8736C /* PostView.xib in Resources */,
+				F6522A231ACFE2FE00A8736C /* BuyView.xib in Resources */,
+				F6522A251ACFE30900A8736C /* DeliverView.xib in Resources */,
 				286102CA1ACFD5E800BF1E1D /* Images.xcassets in Resources */,
+				F6522A2B1ACFE33200A8736C /* DetailView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6522A211ACFE2B600A8736C /* DetailViewController.swift in Sources */,
+				F6522A1F1ACFE2A000A8736C /* PostViewController.swift in Sources */,
+				F6522A131ACFE1CE00A8736C /* WelcomeViewController.swift in Sources */,
+				F6522A191ACFE26100A8736C /* BuyViewController.swift in Sources */,
 				286102C51ACFD5E800BF1E1D /* ViewController.swift in Sources */,
+				F6522A151ACFE20E00A8736C /* ProfileTableViewController.swift in Sources */,
+				F6522A1D1ACFE28D00A8736C /* ProfileViewController.swift in Sources */,
+				F6522A1B1ACFE27300A8736C /* DeliverViewController.swift in Sources */,
 				286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,14 +253,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		286102C61ACFD5E800BF1E1D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				286102C71ACFD5E800BF1E1D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -310,6 +346,7 @@
 			baseConfigurationReference = 3C418E634CBD9C4CFFF96564 /* Pods-GrabItForMe.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GrabItForMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -321,6 +358,7 @@
 			baseConfigurationReference = E9C3BBC356775E7A3796B33F /* Pods-GrabItForMe.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GrabItForMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
