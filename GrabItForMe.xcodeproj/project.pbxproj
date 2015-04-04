@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		284E81F41AD00084002C6C71 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284E81F31AD00084002C6C71 /* DetailView.xib */; };
+		284E81F61AD05A4D002C6C71 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284E81F51AD05A4D002C6C71 /* WelcomeView.xib */; };
 		286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286102C21ACFD5E800BF1E1D /* AppDelegate.swift */; };
-		286102C51ACFD5E800BF1E1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286102C41ACFD5E800BF1E1D /* ViewController.swift */; };
 		286102CA1ACFD5E800BF1E1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286102C91ACFD5E800BF1E1D /* Images.xcassets */; };
 		286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */; };
 		28BB5FA51ACFE3C200A7B06E /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB5FA41ACFE3C200A7B06E /* RLMSupport.swift */; };
@@ -39,10 +39,10 @@
 
 /* Begin PBXFileReference section */
 		284E81F31AD00084002C6C71 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		284E81F51AD05A4D002C6C71 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		286102BD1ACFD5E800BF1E1D /* GrabItForMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrabItForMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		286102C11ACFD5E800BF1E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286102C21ACFD5E800BF1E1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		286102C41ACFD5E800BF1E1D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		286102C91ACFD5E800BF1E1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		286102CC1ACFD5E800BF1E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		28BB5FA41ACFE3C200A7B06E /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
@@ -145,6 +145,7 @@
 				F6522A241ACFE30900A8736C /* DeliverView.xib */,
 				284E81F31AD00084002C6C71 /* DetailView.xib */,
 				F6522A281ACFE32600A8736C /* PostView.xib */,
+				284E81F51AD05A4D002C6C71 /* WelcomeView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -156,7 +157,6 @@
 				F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */,
 				F6522A1E1ACFE2A000A8736C /* PostViewController.swift */,
 				F6522A201ACFE2B600A8736C /* DetailViewController.swift */,
-				286102C41ACFD5E800BF1E1D /* ViewController.swift */,
 				F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */,
 				F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */,
 			);
@@ -255,6 +255,7 @@
 				286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */,
 				28BB5FC81ACFEAF900A7B06E /* PostView.xib in Resources */,
 				28BB5FC51ACFEAF000A7B06E /* BuyView.xib in Resources */,
+				284E81F61AD05A4D002C6C71 /* WelcomeView.xib in Resources */,
 				284E81F41AD00084002C6C71 /* DetailView.xib in Resources */,
 				28BB5FC61ACFEAF400A7B06E /* DeliverView.xib in Resources */,
 				286102CA1ACFD5E800BF1E1D /* Images.xcassets in Resources */,
@@ -317,7 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28BB5FCF1ACFF00100A7B06E /* WelcomeViewController.swift in Sources */,
-				286102C51ACFD5E800BF1E1D /* ViewController.swift in Sources */,
 				28BB5FCD1ACFEFFA00A7B06E /* PostViewController.swift in Sources */,
 				28BB5FCA1ACFECCE00A7B06E /* BuyViewController.swift in Sources */,
 				28BB5FA51ACFE3C200A7B06E /* RLMSupport.swift in Sources */,
