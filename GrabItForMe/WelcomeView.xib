@@ -13,7 +13,20 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grab /it/ for me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJX-hh-laM">
+                    <rect key="frame" x="15" y="318.5" width="345" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="OJX-hh-laM" secondAttribute="centerY" id="qr2-je-7ci"/>
+                <constraint firstAttribute="trailing" secondItem="OJX-hh-laM" secondAttribute="trailing" constant="15" id="sSV-yK-D2d"/>
+                <constraint firstItem="OJX-hh-laM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="vte-4A-ntB"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>
