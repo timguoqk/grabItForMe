@@ -5,5 +5,6 @@ target 'GrabItForMe' do
     pod 'Parse'
     pod 'Facebook-iOS-SDK'
     pod 'Realm'
+    pod 'SwiftHTTP', '~> 0.9.2'
 end
 

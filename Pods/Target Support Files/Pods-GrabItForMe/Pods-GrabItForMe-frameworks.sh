@@ -51,9 +51,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Bolts.framework'
   install_framework 'Facebook_iOS_SDK.framework'
   install_framework 'Realm.framework'
+  install_framework 'SwiftHTTP.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Bolts.framework'
   install_framework 'Facebook_iOS_SDK.framework'
   install_framework 'Realm.framework'
+  install_framework 'SwiftHTTP.framework'
 fi
