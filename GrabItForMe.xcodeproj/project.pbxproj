@@ -12,7 +12,8 @@
 		286102C81ACFD5E800BF1E1D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 286102C61ACFD5E800BF1E1D /* Main.storyboard */; };
 		286102CA1ACFD5E800BF1E1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286102C91ACFD5E800BF1E1D /* Images.xcassets */; };
 		286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */; };
-		FB4CEAE472E032658D4E77EB /* libPods-GrabItForMe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A57DC7E98E7D3223044A2D65 /* libPods-GrabItForMe.a */; };
+		28BB5FA51ACFE3C200A7B06E /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BB5FA41ACFE3C200A7B06E /* RLMSupport.swift */; };
+		34E2A1270DB30907A1033E14 /* Pods_GrabItForMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8206A1587D32E3679548B9 /* Pods_GrabItForMe.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +24,9 @@
 		286102C71ACFD5E800BF1E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		286102C91ACFD5E800BF1E1D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		286102CC1ACFD5E800BF1E1D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		28BB5FA41ACFE3C200A7B06E /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		3C418E634CBD9C4CFFF96564 /* Pods-GrabItForMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabItForMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GrabItForMe/Pods-GrabItForMe.debug.xcconfig"; sourceTree = "<group>"; };
-		A57DC7E98E7D3223044A2D65 /* libPods-GrabItForMe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GrabItForMe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE8206A1587D32E3679548B9 /* Pods_GrabItForMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GrabItForMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C3BBC356775E7A3796B33F /* Pods-GrabItForMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabItForMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrabItForMe/Pods-GrabItForMe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -33,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB4CEAE472E032658D4E77EB /* libPods-GrabItForMe.a in Frameworks */,
+				34E2A1270DB30907A1033E14 /* Pods_GrabItForMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +76,7 @@
 		286102C01ACFD5E800BF1E1D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				28BB5FA41ACFE3C200A7B06E /* RLMSupport.swift */,
 				286102C11ACFD5E800BF1E1D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -82,7 +85,7 @@
 		856280F78BD7100FF50732BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A57DC7E98E7D3223044A2D65 /* libPods-GrabItForMe.a */,
+				BE8206A1587D32E3679548B9 /* Pods_GrabItForMe.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,6 +111,7 @@
 				286102BA1ACFD5E800BF1E1D /* Frameworks */,
 				286102BB1ACFD5E800BF1E1D /* Resources */,
 				83E1EF988DA8EF6AD9991CE0 /* Copy Pods Resources */,
+				D31415573EA604CD43A57B7B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -194,6 +198,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GrabItForMe/Pods-GrabItForMe-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D31415573EA604CD43A57B7B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GrabItForMe/Pods-GrabItForMe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -202,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				286102C51ACFD5E800BF1E1D /* ViewController.swift in Sources */,
+				28BB5FA51ACFE3C200A7B06E /* RLMSupport.swift in Sources */,
 				286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
