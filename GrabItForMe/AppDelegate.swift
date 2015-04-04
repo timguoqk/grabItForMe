@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         Parse.enableLocalDatastore()
         Parse.setApplicationId("jaZrMkwFwy3nZGSFVtAg1ykLfaqJ8Tyx5oH3GtEg", clientKey: "dR7PrlaHPLKyeAijvXP0iePkJR6kXjzj39bh0fMj")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)

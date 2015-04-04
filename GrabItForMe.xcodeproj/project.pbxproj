@@ -27,7 +27,6 @@
 		28BB5FBC1ACFE76F00A7B06E /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FBB1ACFE76F00A7B06E /* StoreKit.framework */; };
 		28BB5FBE1ACFE77600A7B06E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FBD1ACFE77600A7B06E /* SystemConfiguration.framework */; };
 		28BB5FC01ACFE77B00A7B06E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FBF1ACFE77B00A7B06E /* libz.dylib */; };
-		28BB5FC51ACFEAF000A7B06E /* BuyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A221ACFE2FE00A8736C /* BuyView.xib */; };
 		28BB5FC61ACFEAF400A7B06E /* DeliverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A241ACFE30900A8736C /* DeliverView.xib */; };
 		28BB5FC81ACFEAF900A7B06E /* PostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A281ACFE32600A8736C /* PostView.xib */; };
 		28BB5FCA1ACFECCE00A7B06E /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A181ACFE26100A8736C /* BuyViewController.swift */; };
@@ -72,7 +71,6 @@
 		F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliverViewController.swift; sourceTree = "<group>"; };
 		F6522A1E1ACFE2A000A8736C /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F6522A201ACFE2B600A8736C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		F6522A221ACFE2FE00A8736C /* BuyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyView.xib; sourceTree = "<group>"; };
 		F6522A241ACFE30900A8736C /* DeliverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliverView.xib; sourceTree = "<group>"; };
 		F6522A281ACFE32600A8736C /* PostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BB5FAA1ACFE68200A7B06E /* MapKit.framework in Frameworks */,
 				2870754D1AD09535001427C8 /* Slt.framework in Frameworks */,
 				28BB5FC01ACFE77B00A7B06E /* libz.dylib in Frameworks */,
 				28BB5FBE1ACFE77600A7B06E /* SystemConfiguration.framework in Frameworks */,
@@ -95,7 +94,6 @@
 				28BB5FB01ACFE75200A7B06E /* CFNetwork.framework in Frameworks */,
 				28BB5FAE1ACFE74D00A7B06E /* AudioToolbox.framework in Frameworks */,
 				28BB5FAC1ACFE6C600A7B06E /* libsqlite3.dylib in Frameworks */,
-				28BB5FAA1ACFE68200A7B06E /* MapKit.framework in Frameworks */,
 				34E2A1270DB30907A1033E14 /* Pods_GrabItForMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */,
-				F6522A221ACFE2FE00A8736C /* BuyView.xib */,
 				F6522A241ACFE30900A8736C /* DeliverView.xib */,
 				284E81F31AD00084002C6C71 /* DetailView.xib */,
 				F6522A281ACFE32600A8736C /* PostView.xib */,
@@ -263,7 +260,6 @@
 				286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */,
 				2870754B1AD09535001427C8 /* AcousticModelEnglish.bundle in Resources */,
 				28BB5FC81ACFEAF900A7B06E /* PostView.xib in Resources */,
-				28BB5FC51ACFEAF000A7B06E /* BuyView.xib in Resources */,
 				284E81F61AD05A4D002C6C71 /* WelcomeView.xib in Resources */,
 				284E81F41AD00084002C6C71 /* DetailView.xib in Resources */,
 				28BB5FC61ACFEAF400A7B06E /* DeliverView.xib in Resources */,
