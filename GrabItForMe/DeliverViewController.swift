@@ -12,6 +12,9 @@ class DeliverViewController: UIViewController {
     
     override init() {
         super.init(nibName: "DeliverView", bundle: nil)
+        
+        navigationItem.title = "Deliver"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Buy", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("gotoBuy"))
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -20,5 +23,11 @@ class DeliverViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func gotoBuy() {
+        var bvc = BuyViewController()
+//        self.presentViewController(bvc, animated: true, completion: nil)
+        navigationController?.pushViewController(bvc, animated: true)
     }
 }

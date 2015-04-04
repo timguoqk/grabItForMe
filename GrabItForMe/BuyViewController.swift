@@ -17,6 +17,10 @@ class BuyViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     override init() {
         super.init(nibName: nil, bundle: nil)
+        
+        navigationItem.title = "Buy"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Deliver", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("gotoDeliver"))
+        
         manager.requestWhenInUseAuthorization()
         manager.delegate = self
         view = mapView
@@ -26,7 +30,6 @@ class BuyViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.showsPointsOfInterest = true
         
         let uclaCoord = CLLocationCoordinate2DMake(34.0722, -118.4441)
-        //var adjustedRegion = mapView.regionThatFits(MKCoordinateRegionMakeWithDistance(uclaCoord, 100000, 100000))
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(uclaCoord, 1000, 1000), animated: true)
         
     }
@@ -45,5 +48,13 @@ class BuyViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             mapView.setRegion(MKCoordinateRegionMakeWithDistance(loc.coordinate, 20, 20), animated: true)
         }
         
+    }
+    
+    func gotoDeliver() {
+        var dvc = DeliverViewController()
+//        self.modalTransitionStyle = UIModalTransitionStyle.FlipHorizontal
+//        self.modalPresentationStyle = .FullScreen
+//        self.presentViewController(dvc, animated: true, completion: nil)
+        navigationController?.pushViewController(dvc, animated: true)
     }
 }
