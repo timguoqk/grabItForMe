@@ -3,8 +3,50 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>Pods-GrabItForMe-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GrabItForMe-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GrabItForMe-Realm.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GrabItForMe.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>C02216373C9EB0B0EE20EED7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C2D28953DF79DC596D29D819</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE6C2E64ADE50D71E4B99293</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EB8DE7EE40DC469D9916CCA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
