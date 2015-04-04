@@ -1676,7 +1676,7 @@
 				04B3AC138212BB72EB88322E /* BoltsVersion.h */,
 				DA57A8A456095B36792FDE5A /* Support Files */,
 			);
-			path = Bolts;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		EB50A0089080C47F5F2570C1 /* no-arc */ = {
