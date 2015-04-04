@@ -9,16 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GrabItForMe-Facebook-iOS-SDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GrabItForMe-Realm.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-GrabItForMe.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>52A55170E99BDEEBF6E6DEDE</key>
+		<key>09D07719AEAA7D17441ACC38</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5C7F94E4B3CCCC51BCA62035</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9FA1784114E712ADCBF7D31F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FF23041F9617E5F33D989C1D</key>
+		<key>1DFE1A4C90E54BC16FA740C4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

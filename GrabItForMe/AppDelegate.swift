@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("jaZrMkwFwy3nZGSFVtAg1ykLfaqJ8Tyx5oH3GtEg", clientKey: "dR7PrlaHPLKyeAijvXP0iePkJR6kXjzj39bh0fMj")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         
-        PFFacebookUtils.initializeFacebook()
+//        PFFacebookUtils.initializeFacebook()
         
         var rootVC : UIViewController
         window = UIWindow(frame: UIScreen.mainScreen().bounds)

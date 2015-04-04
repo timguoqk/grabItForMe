@@ -12,6 +12,6 @@
 #import <OpenEars/OELogging.h>
 #import <OpenEars/OEAcousticModel.h>
 //#import <FacebookSDK/FacebookSDK.h>
-#import <ParseFacebookUtils/PFFacebookUtils.h>
+//#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 #endif
