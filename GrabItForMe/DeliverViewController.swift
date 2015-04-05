@@ -30,7 +30,7 @@ class DeliverViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let uclaCoord = CLLocationCoordinate2DMake(34.0722, -118.4441)
+        let uclaCoord = CLLocationCoordinate2DMake(34.068936, -118.443212)
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(uclaCoord, 1000, 1000), animated: true)
         var option = UIBarButtonItem(title: "Options", style: UIBarButtonItemStyle.Plain, target: self, action: "gotoProfile")
         navigationItem.leftBarButtonItem = option
