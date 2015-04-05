@@ -368,7 +368,7 @@
 			children = (
 				7C277DD017BB8AE61084F1C8 /* Parse.framework */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		823DA70954105B601F0D56DD /* Bolts */ = {
@@ -693,6 +693,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				F6BA11A2A77DF04944EEDA33 /* PBXTargetDependency */,
+				8F1A511F58CA56C4A4456A21 /* PBXTargetDependency */,
 			);
 			name = "Pods-GrabItForMe-Bolts";
 			productName = "Pods-GrabItForMe-Bolts";
@@ -904,7 +906,7 @@
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		72F4A5814E56FBC0070F8B4D /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -973,24 +975,21 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-GrabItForMe/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-GrabItForMe-Bolts/Pods-GrabItForMe-Bolts-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-GrabItForMe-Bolts/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-GrabItForMe/Pods-GrabItForMe.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_GrabItForMe;
+				MODULEMAP_FILE = "Target Support Files/Pods-GrabItForMe-Bolts/Pods-GrabItForMe-Bolts.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Bolts;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		B08CA7ACB00923AEC6923CAD /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1003,8 +1002,8 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-GrabItForMe-Bolts/Pods-GrabItForMe-Bolts-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-GrabItForMe-Bolts/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-GrabItForMe-SwiftHTTP/Pods-GrabItForMe-SwiftHTTP-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-GrabItForMe-SwiftHTTP/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1013,6 +1012,7 @@
 				PRODUCT_NAME = Bolts;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";

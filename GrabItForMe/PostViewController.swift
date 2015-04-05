@@ -25,15 +25,18 @@ class PostViewController: UIViewController, OEEventsObserverDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println(analyzeText("I am desperate for cookies from Diddy Riese!"))
     }
     
     @IBOutlet weak var textField: UITextField!
     
-    @IBAction func buttonClick(sender: AnyObject) {
+    func analyzeText(input: String) -> [String]{
         // These code snippets use an open-source library. http://unirest.io/objective-c
       
-        var params:[String:AnyObject]=["language": "english", "text": textField]
+        let params:[String:AnyObject]=["language": "english", "text": input]
         var request = HTTPTask()
+        var result = [String]()
+        //var jsonObject:[AnyObject]
         request.requestSerializer.headers["X-Mashape-Key"] = "4Kp5Ac8mCnmshn1KN93OfIFcpYzdp1YoKOnjsnIoKo4Af6mUtK"
         request.requestSerializer.headers["Content-Type"] = "application/x-www-form-urlencoded"
         request.responseSerializer = JSONResponseSerializer()
