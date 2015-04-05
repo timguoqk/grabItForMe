@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="GrabItForMe" customModuleProvider="target">
             <connections>
+                <outlet property="fbButton" destination="tiW-3T-2m2" id="DiQ-xF-abm"/>
+                <outlet property="fbLabel" destination="NNH-PJ-aAe" id="gcG-rW-tef"/>
+                <outlet property="titleLabel" destination="OJX-hh-laM" id="1PU-bJ-llx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="NUI-Ll-d8u"/>
             </connections>
         </placeholder>
@@ -29,6 +32,9 @@
                     <state key="normal" title="Button" image="facebook">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="fbButtonTouched:" destination="-1" eventType="touchDown" id="luG-j5-a1R"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect with Facebook to begin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNH-PJ-aAe">
                     <rect key="frame" x="62" y="546" width="250" height="20.5"/>
