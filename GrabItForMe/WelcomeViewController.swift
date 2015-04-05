@@ -40,6 +40,11 @@ class WelcomeViewController: UIViewController {
                 })
                 SVProgressHUD.dismiss()
                 self.startAnimations()
+                
+                NSThread.sleepForTimeInterval(1)
+                
+                var pvc = PostViewController()
+                self.navigationController?.pushViewController(pvc, animated: true)
             }
             else {
                 println("HELL NO! FB!")
@@ -67,18 +72,15 @@ class WelcomeViewController: UIViewController {
         anim3.duration = 0.3
         
         var anim4 = POPBasicAnimation(propertyNamed: kPOPLayerOpacity)
-        anim3.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        anim3.fromValue = 0
-        anim3.toValue = 1
-        anim3.duration = 0.5
+        anim4.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        anim4.fromValue = 0
+        anim4.toValue = 1
+        anim4.duration = 0.5
         
         fbLabel.layer.pop_addAnimation(anim1, forKey: "pX1")
         titleLabel.layer.pop_addAnimation(anim2, forKey: "pX2")
         fbButton.layer.pop_addAnimation(anim3, forKey: "pS3")
+        welcomeLabel.layer.pop_addAnimation(anim4, forKey: "pO4")
         
-        sleep(1)
-        
-        var pvc = PostViewController()
-        navigationController?.pushViewController(pvc, animated: true)
     }
 }
