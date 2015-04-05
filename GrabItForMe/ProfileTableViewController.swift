@@ -56,7 +56,7 @@ class ProfileTableViewController: UITableViewController, UITextFieldDelegate {
                 cell.textLabel?.text = "College"
                 break;
             case .HomeAddress:
-                cell.textLabel?.text = "Home Address"
+                cell.textLabel?.text = "Delivery Address"
                 break;
             case .Phone:
                 cell.textLabel?.text = "Phone"
@@ -90,5 +90,14 @@ class ProfileTableViewController: UITableViewController, UITextFieldDelegate {
         }
         currentUser.saveEventually(nil)
     }
+/*    func colorForIndex(index: Int) -> UIColor {
+        let val = (CGFloat(index) / CGFloat(4)) * 0.6
+        return UIColor(red: 0.65882353, green: 0.84705882, blue: 0.7254902, alpha: 0.3)
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell,
+        forRowAtIndexPath indexPath: NSIndexPath) {
+            cell.backgroundColor = colorForIndex(indexPath.row)
+    }*/
     
 }

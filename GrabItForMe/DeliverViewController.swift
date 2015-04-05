@@ -20,11 +20,11 @@ class DeliverViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         
         navigationItem.title = "Explore - Deliver"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Buy", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("gotoBuy"))
-
+        
         manager.requestWhenInUseAuthorization()
         manager.delegate = self
     }
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -125,66 +125,65 @@ class DeliverViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         myLineRenderer.lineWidth = 3
         return myLineRenderer
     }
-/*        var origin = "UCLA"
-        var destination =  "Diddy Riese"
-        
-        var mapManager = MapManager()
-        mapManager.directionsUsingGoogle(from: origin, to: destination) { (route, directionInformation, boundingRegion, error) -> () in
-            
-            if(error != nil){
-                
-                println(error!)
-            }else{
-                
-                if let web = self.mapView?{
-                    
-                    dispatch_async(dispatch_get_main_queue()) {
-                        web.addOverlay(route!)
-                        web.setVisibleMapRect(boundingRegion!, animated: true)
-                    }
-                    
-                }
-                
-            }
-        }
-        var latOrigin = 34.0598619
-        var lngOrigin = -118.444444
-        var coordinateOrigin = CLLocationCoordinate2D(latitude: latOrigin, longitude: lngOrigin)
-        var latDestination = 34.068936
-        var lngDestination = -118.443212
-        var coordinateDestination = CLLocationCoordinate2D(latitude: latDestination, longitude: lngDestination)
-        
-        mapManager.directions(from: coordinateOrigin, to: coordinateDestination) { (route, directionInformation, boundingRegion, error) -> () in
-            
-            if (error? != nil) {
-                
-                println(error!)
-            }else{
-                
-                if let web = self.mapView?{
-                    
-                    dispatch_async(dispatch_get_main_queue()) {
-                        
-                        web.addOverlay(route!)
-                        web.setVisibleMapRect(boundingRegion!, animated: true)
-                        
-                    }
-                }
-            }
-        }
+    /*        var origin = "UCLA"
+    var destination =  "Diddy Riese"
+    
+    var mapManager = MapManager()
+    mapManager.directionsUsingGoogle(from: origin, to: destination) { (route, directionInformation, boundingRegion, error) -> () in
+    
+    if(error != nil){
+    
+    println(error!)
+    }else{
+    
+    if let web = self.mapView?{
+    
+    dispatch_async(dispatch_get_main_queue()) {
+    web.addOverlay(route!)
+    web.setVisibleMapRect(boundingRegion!, animated: true)
     }
-
+    
+    }
+    
+    }
+    }
+    var latOrigin = 34.0598619
+    var lngOrigin = -118.444444
+    var coordinateOrigin = CLLocationCoordinate2D(latitude: latOrigin, longitude: lngOrigin)
+    var latDestination = 34.068936
+    var lngDestination = -118.443212
+    var coordinateDestination = CLLocationCoordinate2D(latitude: latDestination, longitude: lngDestination)
+    
+    mapManager.directions(from: coordinateOrigin, to: coordinateDestination) { (route, directionInformation, boundingRegion, error) -> () in
+    
+    if (error? != nil) {
+    
+    println(error!)
+    }else{
+    
+    if let web = self.mapView?{
+    
+    dispatch_async(dispatch_get_main_queue()) {
+    
+    web.addOverlay(route!)
+    web.setVisibleMapRect(boundingRegion!, animated: true)
+    
+    }
+    }
+    }
+    }
+    }
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        if locations.count != 0 {
-            let loc = locations[0] as CLLocation
-            mapView.setRegion(MKCoordinateRegionMakeWithDistance(loc.coordinate, 20, 20), animated: true)
-        }
-        
+    if locations.count != 0 {
+    let loc = locations[0] as CLLocation
+    mapView.setRegion(MKCoordinateRegionMakeWithDistance(loc.coordinate, 20, 20), animated: true)
+    }
+    
     }*/
     
     func gotoBuy() {
         var bvc = BuyMapViewController()
-//        self.presentViewController(bvc, animated: true, completion: nil)
+        //        self.presentViewController(bvc, animated: true, completion: nil)
         navigationController?.pushViewController(bvc, animated: true)
     }
     
@@ -197,5 +196,10 @@ class DeliverViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         var ovc = ProfileTableViewController()
         navigationController?.pushViewController(ovc, animated:true)
     }
-
+    
+    @IBAction func gotoMessage(sender: AnyObject) {
+        var mvc = ProfileTableViewController()
+        navigationController?.pushViewController(mvc, animated:true)
+    }
+    
 }

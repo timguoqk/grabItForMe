@@ -40,7 +40,6 @@
 		F654DFCD1AD0C87B00236167 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F654DFCC1AD0C87B00236167 /* DetailTableViewController.swift */; };
 		F654DFCE1AD0E6EA00236167 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */; };
 		F654DFD01AD0F81600236167 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F654DFCF1AD0F81600236167 /* Annotation.swift */; };
-		F6EB7ED01AD136E60079D7C9 /* MapManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6EB7ECF1AD136E60079D7C9 /* MapManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,7 +81,6 @@
 		F6522A281ACFE32600A8736C /* PostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostView.xib; sourceTree = "<group>"; };
 		F654DFCC1AD0C87B00236167 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		F654DFCF1AD0F81600236167 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
-		F6EB7ECF1AD136E60079D7C9 /* MapManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				F6522A181ACFE26100A8736C /* BuyMapViewController.swift */,
-				F6EB7ECF1AD136E60079D7C9 /* MapManager.swift */,
 				F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */,
 				F6522A1E1ACFE2A000A8736C /* PostViewController.swift */,
 				F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */,
@@ -345,7 +342,6 @@
 				28BB5FD01ACFF00600A7B06E /* ProfileTableViewController.swift in Sources */,
 				F654DFCD1AD0C87B00236167 /* DetailTableViewController.swift in Sources */,
 				286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */,
-				F6EB7ED01AD136E60079D7C9 /* MapManager.swift in Sources */,
 				28BB5FCB1ACFEFF600A7B06E /* DeliverViewController.swift in Sources */,
 				F654DFD01AD0F81600236167 /* Annotation.swift in Sources */,
 				28BB5FCE1ACFEFFC00A7B06E /* (null) in Sources */,
