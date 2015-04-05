@@ -20,14 +20,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("jaZrMkwFwy3nZGSFVtAg1ykLfaqJ8Tyx5oH3GtEg", clientKey: "dR7PrlaHPLKyeAijvXP0iePkJR6kXjzj39bh0fMj")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         
-//        PFFacebookUtils.initializeFacebook()
+        PFFacebookUtils.initializeFacebook()
         
         var rootVC : UIViewController
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        if NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") || PFUser.currentUser() != nil {
-            rootVC = DetailTableViewController()
+        if NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") && PFUser.currentUser() != nil {
+            rootVC = BuyMapViewController()
         }
         else {
+            if PFUser.currentUser() == nil {
+                let user = PFUser()
+                user.username = String(arc4random_uniform(74))
+                user.password = String(arc4random_uniform(74))
+                user.signUp()
+            }
             rootVC = WelcomeViewController()
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
         }
@@ -63,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-        return false
+        return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication, withSession: PFFacebookUtils.session())
     }
 }
 

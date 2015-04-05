@@ -4,6 +4,8 @@ use_frameworks!
 target 'GrabItForMe' do
     pod 'Parse'
     pod 'SwiftHTTP', '~> 0.9.2'
+    pod 'Facebook-iOS-SDK', '~> 3.23.2'
     pod 'pop'
+    pod 'SVProgressHUD'
 end
 
