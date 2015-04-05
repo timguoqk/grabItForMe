@@ -56,12 +56,12 @@ class BuyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         
         mapView.addAnnotation(Degrees)
 
-        let InNOut = Place(title: "In-N-Out Burger",
-            locationName: "922 Gayley Ave",
-            discipline: "Fast Food",
-            coordinate: CLLocationCoordinate2D(latitude: 34.063077, longitude: -118.448031))
+        let Crab = Place(title: "The Boiling Crab",
+            locationName: "10875 Kinross Ave",
+            discipline: "Seafood",
+            coordinate: CLLocationCoordinate2D(latitude: 34.061086, longitude: -118.444705))
         
-        mapView.addAnnotation(InNOut)
+        mapView.addAnnotation(Crab)
         
         let Gushi = Place(title: "Gushi",
             locationName: "978 Gayley Ave",
