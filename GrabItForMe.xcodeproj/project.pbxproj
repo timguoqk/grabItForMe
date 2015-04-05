@@ -35,6 +35,7 @@
 		28BB5FCD1ACFEFFA00A7B06E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1E1ACFE2A000A8736C /* PostViewController.swift */; };
 		28BB5FCF1ACFF00100A7B06E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */; };
 		28BB5FD01ACFF00600A7B06E /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */; };
+		28E347131AD0C42D00628783 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */; };
 		34E2A1270DB30907A1033E14 /* Pods_GrabItForMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8206A1587D32E3679548B9 /* Pods_GrabItForMe.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F654DFCD1AD0C87B00236167 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F654DFCC1AD0C87B00236167 /* DetailTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -326,7 +327,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28BB5FCF1ACFF00100A7B06E /* WelcomeViewController.swift in Sources */,
 				28BB5FCD1ACFEFFA00A7B06E /* PostViewController.swift in Sources */,
 				28BB5FCA1ACFECCE00A7B06E /* BuyMapViewController.swift in Sources */,
 				28BB5FD01ACFF00600A7B06E /* ProfileTableViewController.swift in Sources */,
