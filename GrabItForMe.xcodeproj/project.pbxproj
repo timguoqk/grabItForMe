@@ -10,8 +10,8 @@
 		284B706E1AD0B55B00704BA2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284B706D1AD0B55B00704BA2 /* AVFoundation.framework */; };
 		284B70701AD0B91F00704BA2 /* BuyMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284B706F1AD0B91F00704BA2 /* BuyMapView.xib */; };
 		284DCCCF1AD0D6A10006F0C3 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284DCCCE1AD0D6A10006F0C3 /* ParseFacebookUtils.framework */; };
-		284E81F41AD00084002C6C71 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284E81F31AD00084002C6C71 /* DetailView.xib */; };
 		284E81F61AD05A4D002C6C71 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284E81F51AD05A4D002C6C71 /* WelcomeView.xib */; };
+		2860F1281AD0E51C0023F70A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */; };
 		286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286102C21ACFD5E800BF1E1D /* AppDelegate.swift */; };
 		286102CA1ACFD5E800BF1E1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286102C91ACFD5E800BF1E1D /* Images.xcassets */; };
 		286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */; };
@@ -35,9 +35,7 @@
 		28BB5FCA1ACFECCE00A7B06E /* BuyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A181ACFE26100A8736C /* BuyMapViewController.swift */; };
 		28BB5FCB1ACFEFF600A7B06E /* DeliverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */; };
 		28BB5FCD1ACFEFFA00A7B06E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1E1ACFE2A000A8736C /* PostViewController.swift */; };
-		28BB5FCF1ACFF00100A7B06E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */; };
 		28BB5FD01ACFF00600A7B06E /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */; };
-		28E347131AD0C42D00628783 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */; };
 		34E2A1270DB30907A1033E14 /* Pods_GrabItForMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8206A1587D32E3679548B9 /* Pods_GrabItForMe.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F654DFCD1AD0C87B00236167 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F654DFCC1AD0C87B00236167 /* DetailTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -47,7 +45,6 @@
 		284B706F1AD0B91F00704BA2 /* BuyMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyMapView.xib; sourceTree = "<group>"; };
 		284DCCCB1AD0D5FF0006F0C3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		284DCCCE1AD0D6A10006F0C3 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
-		284E81F31AD00084002C6C71 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		284E81F51AD05A4D002C6C71 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		286102BD1ACFD5E800BF1E1D /* GrabItForMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrabItForMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		286102C11ACFD5E800BF1E1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -341,6 +338,7 @@
 				F654DFCD1AD0C87B00236167 /* DetailTableViewController.swift in Sources */,
 				286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */,
 				28BB5FCB1ACFEFF600A7B06E /* DeliverViewController.swift in Sources */,
+				2860F1281AD0E51C0023F70A /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
