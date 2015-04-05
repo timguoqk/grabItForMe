@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		284B706E1AD0B55B00704BA2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284B706D1AD0B55B00704BA2 /* AVFoundation.framework */; };
 		284B70701AD0B91F00704BA2 /* BuyMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284B706F1AD0B91F00704BA2 /* BuyMapView.xib */; };
+		284DCCCF1AD0D6A10006F0C3 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284DCCCE1AD0D6A10006F0C3 /* ParseFacebookUtils.framework */; };
 		284E81F41AD00084002C6C71 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284E81F31AD00084002C6C71 /* DetailView.xib */; };
 		284E81F61AD05A4D002C6C71 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284E81F51AD05A4D002C6C71 /* WelcomeView.xib */; };
 		286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286102C21ACFD5E800BF1E1D /* AppDelegate.swift */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		284B706D1AD0B55B00704BA2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		284B706F1AD0B91F00704BA2 /* BuyMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyMapView.xib; sourceTree = "<group>"; };
+		284DCCCB1AD0D5FF0006F0C3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		284DCCCE1AD0D6A10006F0C3 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		284E81F31AD00084002C6C71 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		284E81F51AD05A4D002C6C71 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		286102BD1ACFD5E800BF1E1D /* GrabItForMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrabItForMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +92,7 @@
 				28BB5FAA1ACFE68200A7B06E /* MapKit.framework in Frameworks */,
 				2870754D1AD09535001427C8 /* Slt.framework in Frameworks */,
 				28BB5FC01ACFE77B00A7B06E /* libz.dylib in Frameworks */,
+				284DCCCF1AD0D6A10006F0C3 /* ParseFacebookUtils.framework in Frameworks */,
 				28BB5FBE1ACFE77600A7B06E /* SystemConfiguration.framework in Frameworks */,
 				28BB5FBC1ACFE76F00A7B06E /* StoreKit.framework in Frameworks */,
 				28BB5FBA1ACFE76B00A7B06E /* Security.framework in Frameworks */,
@@ -174,6 +178,8 @@
 		856280F78BD7100FF50732BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				284DCCCE1AD0D6A10006F0C3 /* ParseFacebookUtils.framework */,
+				284DCCCB1AD0D5FF0006F0C3 /* FacebookSDK.framework */,
 				284B706D1AD0B55B00704BA2 /* AVFoundation.framework */,
 				287075481AD09535001427C8 /* AcousticModelEnglish.bundle */,
 				287075491AD09535001427C8 /* OpenEars.framework */,
@@ -441,6 +447,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/timguoqk/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = GrabItForMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -460,6 +467,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/timguoqk/Documents/FacebookSDK,
 				);
 				INFOPLIST_FILE = GrabItForMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

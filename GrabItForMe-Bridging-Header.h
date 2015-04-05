@@ -12,7 +12,10 @@
 #import <OpenEars/OELogging.h>
 #import <OpenEars/OEAcousticModel.h>
 //#import <FacebookSDK/FacebookSDK.h>
-//#import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "Pods/Facebook-iOS-SDK/src/FacebookSDK.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <pop/POP.h>
+#import "Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.h"
+#include <stdlib.h>
 
 #endif

@@ -11,6 +11,7 @@ import pop
 
 class WelcomeViewController: UIViewController {
     
+    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var fbLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var fbButton: UIButton!
@@ -28,9 +29,25 @@ class WelcomeViewController: UIViewController {
     }
     
     @IBAction func fbButtonTouched(sender: AnyObject) {
-        
-        //TODO: really login with facebook
-        
+        SVProgressHUD.show()
+        var user = PFUser.currentUser()
+        PFFacebookUtils.linkUser(user, permissions:["user_friends"], {
+            (succeeded: Bool!, error: NSError!) -> Void in
+            if (succeeded != nil) {
+                FBRequestConnection.startForMeWithCompletionHandler({
+                    (connection: FBRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
+                    
+                })
+                SVProgressHUD.dismiss()
+                self.startAnimations()
+            }
+            else {
+                println("HELL NO! FB!")
+            }
+        })
+    }
+    
+    func startAnimations() {
         var anim1 = POPBasicAnimation(propertyNamed: kPOPLayerPositionX)
         anim1.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         anim1.fromValue = fbLabel.layer.position.x
@@ -49,8 +66,19 @@ class WelcomeViewController: UIViewController {
         anim3.toValue = NSValue(CGSize: CGSizeMake(0, 0))
         anim3.duration = 0.3
         
+        var anim4 = POPBasicAnimation(propertyNamed: kPOPLayerOpacity)
+        anim3.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        anim3.fromValue = 0
+        anim3.toValue = 1
+        anim3.duration = 0.5
+        
         fbLabel.layer.pop_addAnimation(anim1, forKey: "pX1")
         titleLabel.layer.pop_addAnimation(anim2, forKey: "pX2")
         fbButton.layer.pop_addAnimation(anim3, forKey: "pS3")
+        
+        sleep(1)
+        
+        var pvc = PostViewController()
+        navigationController?.pushViewController(pvc, animated: true)
     }
 }
