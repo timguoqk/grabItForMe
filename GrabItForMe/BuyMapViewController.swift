@@ -10,27 +10,19 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class BuyViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class BuyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
-    var mapView = MKMapView()
+    @IBOutlet weak var mapView: MKMapView!
     var manager = CLLocationManager()
     
     override init() {
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: "BuyMapView", bundle: nil)
         
         navigationItem.title = "Buy"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Deliver", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("gotoDeliver"))
         
         manager.requestWhenInUseAuthorization()
         manager.delegate = self
-        view = mapView
-        mapView.delegate = self
-        mapView.mapType = MKMapType.Hybrid
-        mapView.showsUserLocation = true
-        mapView.showsPointsOfInterest = true
-        
-        let uclaCoord = CLLocationCoordinate2DMake(34.0722, -118.4441)
-        mapView.setRegion(MKCoordinateRegionMakeWithDistance(uclaCoord, 1000, 1000), animated: true)
         
     }
 
@@ -40,6 +32,13 @@ class BuyViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapView.mapType = MKMapType.Hybrid
+        mapView.showsUserLocation = true
+        mapView.showsPointsOfInterest = true
+        
+        let uclaCoord = CLLocationCoordinate2DMake(34.0722, -118.4441)
+        mapView.setRegion(MKCoordinateRegionMakeWithDistance(uclaCoord, 1000, 1000), animated: true)
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -56,5 +55,10 @@ class BuyViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 //        self.modalPresentationStyle = .FullScreen
 //        self.presentViewController(dvc, animated: true, completion: nil)
         navigationController?.pushViewController(dvc, animated: true)
+    }
+    
+    func gotoOrder() {
+        var pvc = PostViewController()
+        navigationController?.pushViewController(pvc, animated: true)
     }
 }

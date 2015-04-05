@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var rootVC : UIViewController
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") {
-            rootVC = BuyViewController()
+            rootVC = BuyMapViewController()
         }
         else {
             rootVC = WelcomeViewController()

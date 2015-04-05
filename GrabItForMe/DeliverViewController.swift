@@ -26,7 +26,7 @@ class DeliverViewController: UIViewController {
     }
     
     func gotoBuy() {
-        var bvc = BuyViewController()
+        var bvc = BuyMapViewController()
 //        self.presentViewController(bvc, animated: true, completion: nil)
         navigationController?.pushViewController(bvc, animated: true)
     }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		284B706E1AD0B55B00704BA2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284B706D1AD0B55B00704BA2 /* AVFoundation.framework */; };
+		284B70701AD0B91F00704BA2 /* BuyMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284B706F1AD0B91F00704BA2 /* BuyMapView.xib */; };
 		284E81F41AD00084002C6C71 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284E81F31AD00084002C6C71 /* DetailView.xib */; };
 		284E81F61AD05A4D002C6C71 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284E81F51AD05A4D002C6C71 /* WelcomeView.xib */; };
 		286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286102C21ACFD5E800BF1E1D /* AppDelegate.swift */; };
@@ -29,7 +31,7 @@
 		28BB5FC01ACFE77B00A7B06E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 28BB5FBF1ACFE77B00A7B06E /* libz.dylib */; };
 		28BB5FC61ACFEAF400A7B06E /* DeliverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A241ACFE30900A8736C /* DeliverView.xib */; };
 		28BB5FC81ACFEAF900A7B06E /* PostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6522A281ACFE32600A8736C /* PostView.xib */; };
-		28BB5FCA1ACFECCE00A7B06E /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A181ACFE26100A8736C /* BuyViewController.swift */; };
+		28BB5FCA1ACFECCE00A7B06E /* BuyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A181ACFE26100A8736C /* BuyMapViewController.swift */; };
 		28BB5FCB1ACFEFF600A7B06E /* DeliverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */; };
 		28BB5FCD1ACFEFFA00A7B06E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1E1ACFE2A000A8736C /* PostViewController.swift */; };
 		28BB5FCE1ACFEFFC00A7B06E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A201ACFE2B600A8736C /* DetailViewController.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		284B706D1AD0B55B00704BA2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		284B706F1AD0B91F00704BA2 /* BuyMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyMapView.xib; sourceTree = "<group>"; };
 		284E81F31AD00084002C6C71 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		284E81F51AD05A4D002C6C71 /* WelcomeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeView.xib; sourceTree = "<group>"; };
 		286102BD1ACFD5E800BF1E1D /* GrabItForMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GrabItForMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +71,7 @@
 		E9C3BBC356775E7A3796B33F /* Pods-GrabItForMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GrabItForMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-GrabItForMe/Pods-GrabItForMe.release.xcconfig"; sourceTree = "<group>"; };
 		F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
-		F6522A181ACFE26100A8736C /* BuyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		F6522A181ACFE26100A8736C /* BuyMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuyMapViewController.swift; sourceTree = "<group>"; };
 		F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeliverViewController.swift; sourceTree = "<group>"; };
 		F6522A1E1ACFE2A000A8736C /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F6522A201ACFE2B600A8736C /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28BB5FAE1ACFE74D00A7B06E /* AudioToolbox.framework in Frameworks */,
+				284B706E1AD0B55B00704BA2 /* AVFoundation.framework in Frameworks */,
 				28BB5FAA1ACFE68200A7B06E /* MapKit.framework in Frameworks */,
 				2870754D1AD09535001427C8 /* Slt.framework in Frameworks */,
 				28BB5FC01ACFE77B00A7B06E /* libz.dylib in Frameworks */,
@@ -92,7 +98,6 @@
 				2870754C1AD09535001427C8 /* OpenEars.framework in Frameworks */,
 				28BB5FB21ACFE75600A7B06E /* CoreGraphics.framework in Frameworks */,
 				28BB5FB01ACFE75200A7B06E /* CFNetwork.framework in Frameworks */,
-				28BB5FAE1ACFE74D00A7B06E /* AudioToolbox.framework in Frameworks */,
 				28BB5FAC1ACFE6C600A7B06E /* libsqlite3.dylib in Frameworks */,
 				34E2A1270DB30907A1033E14 /* Pods_GrabItForMe.framework in Frameworks */,
 			);
@@ -148,6 +153,7 @@
 				284E81F31AD00084002C6C71 /* DetailView.xib */,
 				F6522A281ACFE32600A8736C /* PostView.xib */,
 				284E81F51AD05A4D002C6C71 /* WelcomeView.xib */,
+				284B706F1AD0B91F00704BA2 /* BuyMapView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -155,7 +161,7 @@
 		28BB5FA81ACFE5C500A7B06E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F6522A181ACFE26100A8736C /* BuyViewController.swift */,
+				F6522A181ACFE26100A8736C /* BuyMapViewController.swift */,
 				F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */,
 				F6522A1E1ACFE2A000A8736C /* PostViewController.swift */,
 				F6522A201ACFE2B600A8736C /* DetailViewController.swift */,
@@ -168,6 +174,7 @@
 		856280F78BD7100FF50732BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				284B706D1AD0B55B00704BA2 /* AVFoundation.framework */,
 				287075481AD09535001427C8 /* AcousticModelEnglish.bundle */,
 				287075491AD09535001427C8 /* OpenEars.framework */,
 				2870754A1AD09535001427C8 /* Slt.framework */,
@@ -257,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284B70701AD0B91F00704BA2 /* BuyMapView.xib in Resources */,
 				286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */,
 				2870754B1AD09535001427C8 /* AcousticModelEnglish.bundle in Resources */,
 				28BB5FC81ACFEAF900A7B06E /* PostView.xib in Resources */,
@@ -324,7 +332,7 @@
 			files = (
 				28BB5FCF1ACFF00100A7B06E /* WelcomeViewController.swift in Sources */,
 				28BB5FCD1ACFEFFA00A7B06E /* PostViewController.swift in Sources */,
-				28BB5FCA1ACFECCE00A7B06E /* BuyViewController.swift in Sources */,
+				28BB5FCA1ACFECCE00A7B06E /* BuyMapViewController.swift in Sources */,
 				28BB5FD01ACFF00600A7B06E /* ProfileTableViewController.swift in Sources */,
 				286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */,
 				28BB5FCB1ACFEFF600A7B06E /* DeliverViewController.swift in Sources */,

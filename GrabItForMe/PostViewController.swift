@@ -9,10 +9,14 @@
 import UIKit
 import SwiftHTTP
 
-class PostViewController: UIViewController {
+class PostViewController: UIViewController, OEEventsObserverDelegate {
+    let words = ["I", "WANT", "TO", "BUY", "APPLES", "AT", "RALPHS"];
+    let lmfName = "lmfName"
+    var openEarsObserver = OEEventsObserver()
     
     override init() {
         super.init(nibName: "PostView", bundle: nil)
+        openEarsObserver.delegate = self
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -36,4 +40,21 @@ class PostViewController: UIViewController {
         request.POST("https://japerk-text-processing.p.mashape.com/phrases/", parameters: params, success: {(response: HTTPResponse) in if let json: AnyObject = response.responseObject { println("\(json)") } },failure: {(error: NSError, response: HTTPResponse?) in println("\(error)") })
         }
 
+    func initOE() {
+        var lmGenerator = OELanguageModelGenerator()
+        
+        let err = lmGenerator.generateLanguageModelFromArray(words, withFilesNamed: "lmfName", forAcousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"))
+        if err != nil {
+            NSLog("Error: err.localizedDescription")
+        }
+        let lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName("lmfName")
+        let dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName("lmfName")
+        
+        OEPocketsphinxController.sharedInstance().setActive(true, error: nil)
+        OEPocketsphinxController.sharedInstance().startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath:"AcousticModelEnglish" , languageModelIsJSGF: false)
+    }
+    
+    func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
+        NSLog("The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
+    }
 }
