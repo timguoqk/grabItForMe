@@ -10,9 +10,11 @@ import UIKit
 import SwiftHTTP
 
 class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicrophoneDelegate {
+    var lmPath: String!
+    var dicPath: String!
+    var currentWord: String!
+    var openEarsEventsObserver: OEEventsObserver!
     let words = ["I", "WANT", "TO", "BUY", "APPLES", "AT", "RALPHS", "AM", "DESPERATE", "FOR", "COOKIES", "FROM", "DIDDY", "RIESE"];
-    let lmfName = "lmfName"
-    var openEarsObserver = OEEventsObserver()
     @IBOutlet weak var waveView: ZLSinusWaveView!
     
     override init() {
@@ -28,7 +30,8 @@ class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicropho
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initOE()
+        loadOpenEars()
+        startListening()
         waveView.backgroundColor = UIColor.whiteColor()
         waveView.color = UIColor.blackColor()
         waveView.plotType = EZPlotType.Buffer
@@ -63,25 +66,6 @@ class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicropho
             } },failure: {(error: NSError, response: HTTPResponse?) in println("\(error)") })
     }
     
-    func initOE() {
-        var lmGenerator = OELanguageModelGenerator()
-        
-        let err = lmGenerator.generateLanguageModelFromArray(words, withFilesNamed: "lmfName", forAcousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"))
-        if err != nil {
-            NSLog("Error: err.localizedDescription")
-        }
-        let lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName("lmfName")
-        let dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName("lmfName")
-        
-        OEPocketsphinxController.sharedInstance().setActive(true, error: nil)
-        OEPocketsphinxController.sharedInstance().startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath:"AcousticModelEnglish" , languageModelIsJSGF: false)
-        openEarsObserver.delegate = self
-    }
-    
-    func pocketsphinxDidReceiveHypothesis(hypothesis: String!, recognitionScore: String!, utteranceID: String!) {
-        NSLog("The received hypothesis is %@ with a score of %@ and an ID of %@", hypothesis, recognitionScore, utteranceID);
-    }
-    
     func gotoExplore() {
         var bmvc = BuyMapViewController()
         navigationController?.pushViewController(bmvc, animated: true)
@@ -92,4 +76,73 @@ class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicropho
             self.waveView.updateBuffer(buffer[0], withBufferSize: bufferSize)
         })
     }
+    
+    //OpenEars methods begin
+    
+    func loadOpenEars() {
+        self.openEarsEventsObserver = OEEventsObserver()
+        self.openEarsEventsObserver.delegate = self
+        
+        var lmGenerator: OELanguageModelGenerator = OELanguageModelGenerator()
+        
+        var name = "LanguageModelFileStarSaver"
+        lmGenerator.generateLanguageModelFromArray(words, withFilesNamed: name, forAcousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"))
+        
+        lmPath = lmGenerator.pathToSuccessfullyGeneratedLanguageModelWithRequestedName(name)
+        dicPath = lmGenerator.pathToSuccessfullyGeneratedDictionaryWithRequestedName(name)
+    }
+    
+    func pocketsphinxDidReceiveHypothesis(hypothesis: NSString, recognitionScore: NSString, utteranceID: NSString) {
+        println("The received hypothesis is \(hypothesis) with a score of \(recognitionScore) and an ID of \(utteranceID)")
+    }
+    
+    func pocketsphinxDidStartListening() {
+        println("Pocketsphinx is now listening.")
+    }
+    
+    func pocketsphinxDidDetectSpeech() {
+        println("Pocketsphinx has detected speech.")
+    }
+    
+    func pocketsphinxDidDetectFinishedSpeech() {
+        println("Pocketsphinx has detected a period of silence, concluding an utterance.")
+    }
+    
+    func pocketsphinxDidStopListening() {
+        println("Pocketsphinx has stopped listening.")
+    }
+    
+    func pocketsphinxDidSuspendRecognition() {
+        println("Pocketsphinx has suspended recognition.")
+    }
+    
+    func pocketsphinxDidResumeRecognition() {
+        println("Pocketsphinx has resumed recognition.")
+    }
+    
+    func pocketsphinxDidChangeLanguageModelToFile(newLanguageModelPathAsString: String, newDictionaryPathAsString: String) {
+        println("Pocketsphinx is now using the following language model: \(newLanguageModelPathAsString) and the following dictionary: \(newDictionaryPathAsString)")
+    }
+    
+    func pocketSphinxContinuousSetupDidFailWithReason(reasonForFailure: String) {
+        println("Listening setup wasn't successful and returned the failure reason: \(reasonForFailure)")
+    }
+    
+    func pocketSphinxContinuousTeardownDidFailWithReason(reasonForFailure: String) {
+        println("Listening teardown wasn't successful and returned the failure reason: \(reasonForFailure)")
+    }
+    
+    func testRecognitionCompleted() {
+        println("A test file that was submitted for recognition is now complete.")
+    }
+    
+    func startListening() {
+        OEPocketsphinxController.sharedInstance().setActive(true, error: nil)
+        OEPocketsphinxController.sharedInstance().startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath: OEAcousticModel.pathToModel("AcousticModelEnglish"), languageModelIsJSGF: false)
+    }
+    
+    func stopListening() {
+        OEPocketsphinxController.sharedInstance().stopListening()
+    }
+    //OpenEars methods end
 }
