@@ -111,4 +111,14 @@ class BuyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
 //        self.presentViewController(dvc, animated: true, completion: nil)
         navigationController?.pushViewController(dvc, animated: true)
     }
+    
+    func gotoOrder() {
+        var pvc = PostViewController()
+        navigationController?.pushViewController(pvc, animated: true)
+    }
+    
+    func gotoProfile() {
+        var ovc = ProfileTableViewController()
+        navigationController?.pushViewController(ovc, animated:true)
+    }
 }

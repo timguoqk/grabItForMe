@@ -34,7 +34,7 @@ class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicropho
         waveView.plotType = EZPlotType.Buffer
         waveView.shouldFill = true
         waveView.shouldMirror = true
-        waveView.maxAmplitude = 0.1
+        waveView.maxAmplitude = 0.2
         EZMicrophone.sharedMicrophone().startFetchingAudio()
         
 //        analyzeText("I am desperate for cookies from Diddy Riese!", completion: {(result) in
@@ -75,7 +75,6 @@ class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicropho
         
         OEPocketsphinxController.sharedInstance().setActive(true, error: nil)
         OEPocketsphinxController.sharedInstance().startListeningWithLanguageModelAtPath(lmPath, dictionaryAtPath: dicPath, acousticModelAtPath:"AcousticModelEnglish" , languageModelIsJSGF: false)
-        assert(OEPocketsphinxController.sharedInstance().isListening, "GEE")
         openEarsObserver.delegate = self
     }
     
