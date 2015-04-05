@@ -21,7 +21,7 @@
                         <barButtonItem title="Ready to order?" id="RGL-QU-CqZ"/>
                     </items>
                 </toolbar>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="hybrid" pitchEnabled="NO" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZM3-wA-F0v">
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="hybrid" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZM3-wA-F0v">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                     <connections>
                         <outlet property="delegate" destination="-1" id="d2p-LH-H9F"/>

@@ -24,12 +24,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var rootVC : UIViewController
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        if NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") {
+        if NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") || PFUser.currentUser() != nil {
             rootVC = BuyMapViewController()
         }
         else {
             rootVC = WelcomeViewController()
-//            rootVC = ProfileTableViewController()
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: "HasLaunchedOnce")
         }
         

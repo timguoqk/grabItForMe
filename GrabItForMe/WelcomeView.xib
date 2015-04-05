@@ -15,19 +15,42 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grab /it/ for me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OJX-hh-laM">
-                    <rect key="frame" x="15" y="318.5" width="345" height="30"/>
+                    <rect key="frame" x="15" y="170" width="345" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tiW-3T-2m2">
+                    <rect key="frame" x="137" y="284" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="E3J-6I-yke"/>
+                        <constraint firstAttribute="height" constant="100" id="VBd-7q-EE7"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="facebook">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Connect with Facebook to begin" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNH-PJ-aAe">
+                    <rect key="frame" x="62" y="546" width="250" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="centerY" secondItem="OJX-hh-laM" secondAttribute="centerY" id="qr2-je-7ci"/>
+                <constraint firstItem="OJX-hh-laM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="170" id="3Tr-E0-RcX"/>
+                <constraint firstAttribute="bottom" secondItem="NNH-PJ-aAe" secondAttribute="bottom" constant="100" id="Cie-jz-T2g"/>
+                <constraint firstAttribute="centerX" secondItem="tiW-3T-2m2" secondAttribute="centerX" id="Ptw-TU-IDy"/>
+                <constraint firstAttribute="centerX" secondItem="NNH-PJ-aAe" secondAttribute="centerX" id="gvA-LG-fKm"/>
+                <constraint firstAttribute="centerY" secondItem="tiW-3T-2m2" secondAttribute="centerY" id="mwQ-qK-J9f"/>
                 <constraint firstAttribute="trailing" secondItem="OJX-hh-laM" secondAttribute="trailing" constant="15" id="sSV-yK-D2d"/>
                 <constraint firstItem="OJX-hh-laM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="vte-4A-ntB"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>
+    <resources>
+        <image name="facebook" width="300" height="300"/>
+    </resources>
 </document>

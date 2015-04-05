@@ -31,12 +31,7 @@ class BuyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        mapView.mapType = MKMapType.Hybrid
-        mapView.showsUserLocation = true
-        mapView.showsPointsOfInterest = true
-        
+        super.viewDidLoad()        
         let uclaCoord = CLLocationCoordinate2DMake(34.0722, -118.4441)
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(uclaCoord, 1000, 1000), animated: true)
     }
