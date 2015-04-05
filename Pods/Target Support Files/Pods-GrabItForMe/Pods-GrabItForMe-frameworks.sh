@@ -49,15 +49,19 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Bolts.framework'
+  install_framework 'EZAudio.framework'
   install_framework 'FacebookSDK.framework'
   install_framework 'SVProgressHUD.framework'
   install_framework 'SwiftHTTP.framework'
+  install_framework 'ZLSinusWaveView.framework'
   install_framework 'pop.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Bolts.framework'
+  install_framework 'EZAudio.framework'
   install_framework 'FacebookSDK.framework'
   install_framework 'SVProgressHUD.framework'
   install_framework 'SwiftHTTP.framework'
+  install_framework 'ZLSinusWaveView.framework'
   install_framework 'pop.framework'
 fi

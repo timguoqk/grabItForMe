@@ -13,7 +13,7 @@ class DeliverViewController: UIViewController {
     override init() {
         super.init(nibName: "DeliverView", bundle: nil)
         
-        navigationItem.title = "Deliver"
+        navigationItem.title = "Explore - Deliver"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Buy", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("gotoBuy"))
     }
 

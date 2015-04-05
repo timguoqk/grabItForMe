@@ -17,5 +17,7 @@
 #import <pop/POP.h>
 #import "Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.h"
 #include <stdlib.h>
+#import "Pods/EZAudio/EZAudio/EZAudio.h"
+#import "Pods/ZLSinusWaveView/ZLSinusWaveView/ZLSinusWaveView.h"
 
 #endif

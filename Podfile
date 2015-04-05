@@ -7,5 +7,7 @@ target 'GrabItForMe' do
     pod 'Facebook-iOS-SDK', '~> 3.23.2'
     pod 'pop'
     pod 'SVProgressHUD'
+    pod 'EZAudio'
+    pod 'ZLSinusWaveView'
 end
 

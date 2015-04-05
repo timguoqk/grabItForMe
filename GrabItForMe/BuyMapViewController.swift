@@ -18,7 +18,7 @@ class BuyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     override init() {
         super.init(nibName: "BuyMapView", bundle: nil)
         
-        navigationItem.title = "Buy"
+        navigationItem.title = "Explore - Buy"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Deliver", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("gotoDeliver"))
         
         manager.requestWhenInUseAuthorization()
@@ -26,6 +26,11 @@ class BuyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         
     }
 
+    @IBAction func gotoPost(sender: AnyObject) {
+        var pvc = PostViewController()
+        navigationController?.pushViewController(pvc, animated: true)
+    }
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -50,10 +55,5 @@ class BuyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
 //        self.modalPresentationStyle = .FullScreen
 //        self.presentViewController(dvc, animated: true, completion: nil)
         navigationController?.pushViewController(dvc, animated: true)
-    }
-    
-    func gotoOrder() {
-        var pvc = PostViewController()
-        navigationController?.pushViewController(pvc, animated: true)
     }
 }

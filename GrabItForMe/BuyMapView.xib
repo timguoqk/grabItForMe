@@ -18,7 +18,11 @@
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mjS-av-5S6">
                     <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                     <items>
-                        <barButtonItem title="Ready to order?" id="RGL-QU-CqZ"/>
+                        <barButtonItem title="Ready to order?" id="RGL-QU-CqZ">
+                            <connections>
+                                <action selector="gotoPost:" destination="-1" id="Qdx-DP-WLt"/>
+                            </connections>
+                        </barButtonItem>
                     </items>
                 </toolbar>
                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="hybrid" pitchEnabled="NO" showsUserLocation="YES" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZM3-wA-F0v">

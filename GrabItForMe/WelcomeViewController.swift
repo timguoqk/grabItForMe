@@ -9,12 +9,14 @@
 import UIKit
 import pop
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController, POPAnimationDelegate {
     
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var fbLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var fbButton: UIButton!
+    
+    var animationStopCount = 0
     
     override init() {
         super.init(nibName: "WelcomeView", bundle: nil)
@@ -40,11 +42,6 @@ class WelcomeViewController: UIViewController {
                 })
                 SVProgressHUD.dismiss()
                 self.startAnimations()
-                
-                NSThread.sleepForTimeInterval(1)
-                
-                var pvc = PostViewController()
-                self.navigationController?.pushViewController(pvc, animated: true)
             }
             else {
                 println("HELL NO! FB!")
@@ -82,5 +79,13 @@ class WelcomeViewController: UIViewController {
         fbButton.layer.pop_addAnimation(anim3, forKey: "pS3")
         welcomeLabel.layer.pop_addAnimation(anim4, forKey: "pO4")
         
+    }
+    
+    func pop_animationDidStop(anim: POPAnimation!, finished: Bool) {
+        animationStopCount += 1
+        if animationStopCount == 4 {
+            var pvc = PostViewController()
+            self.navigationController?.pushViewController(pvc, animated: true)
+        }
     }
 }
