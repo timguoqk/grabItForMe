@@ -21,15 +21,17 @@ class PostViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        println(analyzeText("I am desperate for cookies from Diddy Riese!"))
     }
     
     @IBOutlet weak var textField: UITextField!
     
-    @IBAction func buttonClick(sender: AnyObject) {
+    func analyzeText(input: String) -> [String]{
         // These code snippets use an open-source library. http://unirest.io/objective-c
       
-        let params:[String:AnyObject]=["language": "english", "text": textField.text]
+        let params:[String:AnyObject]=["language": "english", "text": input]
         var request = HTTPTask()
+        var result = [String]()
         //var jsonObject:[AnyObject]
         request.requestSerializer.headers["X-Mashape-Key"] = "4Kp5Ac8mCnmshn1KN93OfIFcpYzdp1YoKOnjsnIoKo4Af6mUtK"
         request.requestSerializer.headers["Content-Type"] = "application/x-www-form-urlencoded"
@@ -39,8 +41,12 @@ class PostViewController: UIViewController {
             var dict = text as NSDictionary
             var loc = text["LOCATION"] as NSArray
             var str = loc[0] as NSString // location
+            result.append(str)
             var good = text["NP"] as NSArray // Array of nouns
-
+            str = good[2] as NSString
+            result.append(str)
             } },failure: {(error: NSError, response: HTTPResponse?) in println("\(error)") })
-        }
+        return result
+        //FIXME: this is async
+    }
 }
