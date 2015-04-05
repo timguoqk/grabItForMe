@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DeliverViewController" customModule="GrabItForMe" customModuleProvider="target">
             <connections>
+                <outlet property="mapView" destination="6RC-lT-REN" id="snx-Iq-ysT"/>
                 <outlet property="view" destination="iN0-l3-epB" id="XgL-cL-Enh"/>
             </connections>
         </placeholder>

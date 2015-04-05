@@ -19,7 +19,7 @@ class DeliverViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         
         navigationItem.title = "Deliver"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Buy", style: UIBarButtonItemStyle.Plain, target: self, action: Selector("gotoBuy"))
-        
+
         manager.requestWhenInUseAuthorization()
         manager.delegate = self
     }
@@ -32,7 +32,8 @@ class DeliverViewController: UIViewController, MKMapViewDelegate, CLLocationMana
         super.viewDidLoad()
         let uclaCoord = CLLocationCoordinate2DMake(34.0722, -118.4441)
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(uclaCoord, 1000, 1000), animated: true)
-
+        var option = UIBarButtonItem(title: "Options", style: UIBarButtonItemStyle.Plain, target: self, action: "gotoProfile")
+        navigationItem.leftBarButtonItem = option
     }
 
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -52,6 +53,11 @@ class DeliverViewController: UIViewController, MKMapViewDelegate, CLLocationMana
     func gotoOrder() {
         var pvc = PostViewController()
         navigationController?.pushViewController(pvc, animated: true)
+    }
+    
+    func gotoProfile() {
+        var ovc = ProfileTableViewController()
+        navigationController?.pushViewController(ovc, animated:true)
     }
 
 }

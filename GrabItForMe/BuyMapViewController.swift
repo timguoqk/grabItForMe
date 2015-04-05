@@ -23,7 +23,6 @@ class BuyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         
         manager.requestWhenInUseAuthorization()
         manager.delegate = self
-        
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -34,6 +33,8 @@ class BuyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
         super.viewDidLoad()        
         let uclaCoord = CLLocationCoordinate2DMake(34.0722, -118.4441)
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(uclaCoord, 1000, 1000), animated: true)
+        var option = UIBarButtonItem(title: "Options", style: UIBarButtonItemStyle.Plain, target: self, action: "gotoProfile")
+        navigationItem.leftBarButtonItem = option
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
@@ -55,5 +56,10 @@ class BuyMapViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     func gotoOrder() {
         var pvc = PostViewController()
         navigationController?.pushViewController(pvc, animated: true)
+    }
+    
+    func gotoProfile() {
+        var ovc = ProfileTableViewController()
+        navigationController?.pushViewController(ovc, animated:true)
     }
 }
