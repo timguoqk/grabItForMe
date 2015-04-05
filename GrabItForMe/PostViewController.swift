@@ -49,19 +49,31 @@ class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicropho
         // These code snippets use an open-source library. http://unirest.io/objective-c
         let params:[String:AnyObject]=["language": "english", "text": input]
         var request = HTTPTask()
-        var result = [String]()
         request.requestSerializer.headers["X-Mashape-Key"] = "4Kp5Ac8mCnmshn1KN93OfIFcpYzdp1YoKOnjsnIoKo4Af6mUtK"
         request.requestSerializer.headers["Content-Type"] = "application/x-www-form-urlencoded"
         request.responseSerializer = JSONResponseSerializer()
         request.POST("https://japerk-text-processing.p.mashape.com/phrases/", parameters: params, success: {(response: HTTPResponse) in if let text: AnyObject = response.responseObject {
-            
-            var dict = text as NSDictionary
-            var loc = text["LOCATION"] as NSArray
-            var str = loc[0] as NSString // location
-            result.append(str)
-            var good = text["NP"] as NSArray // Array of nouns
-            str = good[2] as NSString
-            result.append(str)
+            var result = [String]()
+            var dict: NSDictionary = text as NSDictionary
+            if dict.count != 0 {
+                if dict.objectForKey("LOCATION") != nil {
+                    var loc = dict["LOCATION"] as NSArray
+                    var str = loc[0] as NSString // location
+                    result.append(str)
+                }
+                else {
+                    result.append(" ")
+                }
+                if dict.objectForKey("NP") != nil {
+                    var good = text["NP"] as NSArray // Array of nouns
+                    var str = good[2] as NSString
+                    result.append(str)
+                }
+                else {
+                    result.append(" ")
+                }
+                
+            }
             completion(result: result)
             } },failure: {(error: NSError, response: HTTPResponse?) in println("\(error)") })
     }
@@ -94,6 +106,9 @@ class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicropho
     
     func pocketsphinxDidReceiveHypothesis(hypothesis: NSString, recognitionScore: NSString, utteranceID: NSString) {
         println("The received hypothesis is \(hypothesis) with a score of \(recognitionScore) and an ID of \(utteranceID)")
+        analyzeText(hypothesis, completion: {(result) in
+            println("\(result)")
+        })
     }
     
     func pocketsphinxDidStartListening() {
