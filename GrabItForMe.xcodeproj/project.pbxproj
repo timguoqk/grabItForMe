@@ -11,7 +11,6 @@
 		284B70701AD0B91F00704BA2 /* BuyMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284B706F1AD0B91F00704BA2 /* BuyMapView.xib */; };
 		284DCCCF1AD0D6A10006F0C3 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 284DCCCE1AD0D6A10006F0C3 /* ParseFacebookUtils.framework */; };
 		284E81F61AD05A4D002C6C71 /* WelcomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284E81F51AD05A4D002C6C71 /* WelcomeView.xib */; };
-		2860F1281AD0E51C0023F70A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */; };
 		286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286102C21ACFD5E800BF1E1D /* AppDelegate.swift */; };
 		286102CA1ACFD5E800BF1E1D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286102C91ACFD5E800BF1E1D /* Images.xcassets */; };
 		286102CD1ACFD5E800BF1E1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286102CB1ACFD5E800BF1E1D /* LaunchScreen.xib */; };
@@ -35,9 +34,12 @@
 		28BB5FCA1ACFECCE00A7B06E /* BuyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A181ACFE26100A8736C /* BuyMapViewController.swift */; };
 		28BB5FCB1ACFEFF600A7B06E /* DeliverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1A1ACFE27300A8736C /* DeliverViewController.swift */; };
 		28BB5FCD1ACFEFFA00A7B06E /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A1E1ACFE2A000A8736C /* PostViewController.swift */; };
+		28BB5FCE1ACFEFFC00A7B06E /* (null) in Sources */ = {isa = PBXBuildFile; };
 		28BB5FD01ACFF00600A7B06E /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */; };
 		34E2A1270DB30907A1033E14 /* Pods_GrabItForMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8206A1587D32E3679548B9 /* Pods_GrabItForMe.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F654DFCD1AD0C87B00236167 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F654DFCC1AD0C87B00236167 /* DetailTableViewController.swift */; };
+		F654DFCE1AD0E6EA00236167 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */; };
+		F654DFD01AD0F81600236167 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F654DFCF1AD0F81600236167 /* Annotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +80,7 @@
 		F6522A241ACFE30900A8736C /* DeliverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliverView.xib; sourceTree = "<group>"; };
 		F6522A281ACFE32600A8736C /* PostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostView.xib; sourceTree = "<group>"; };
 		F654DFCC1AD0C87B00236167 /* DetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		F654DFCF1AD0F81600236167 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +171,7 @@
 				F6522A121ACFE1CE00A8736C /* WelcomeViewController.swift */,
 				F6522A141ACFE20E00A8736C /* ProfileTableViewController.swift */,
 				F654DFCC1AD0C87B00236167 /* DetailTableViewController.swift */,
+				F654DFCF1AD0F81600236167 /* Annotation.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -333,12 +337,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				28BB5FCD1ACFEFFA00A7B06E /* PostViewController.swift in Sources */,
+				F654DFCE1AD0E6EA00236167 /* WelcomeViewController.swift in Sources */,
 				28BB5FCA1ACFECCE00A7B06E /* BuyMapViewController.swift in Sources */,
 				28BB5FD01ACFF00600A7B06E /* ProfileTableViewController.swift in Sources */,
 				F654DFCD1AD0C87B00236167 /* DetailTableViewController.swift in Sources */,
 				286102C31ACFD5E800BF1E1D /* AppDelegate.swift in Sources */,
 				28BB5FCB1ACFEFF600A7B06E /* DeliverViewController.swift in Sources */,
-				2860F1281AD0E51C0023F70A /* WelcomeViewController.swift in Sources */,
+				F654DFD01AD0F81600236167 /* Annotation.swift in Sources */,
+				28BB5FCE1ACFEFFC00A7B06E /* (null) in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
