@@ -108,5 +108,4 @@ class DetailTableViewController: UITableViewController, UITextFieldDelegate {
         }
         currentUser.saveEventually(nil)
     }
-    
 }

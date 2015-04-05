@@ -8,13 +8,25 @@
 
 import UIKit
 import SwiftHTTP
+import pop
+import SCLAlertView
 
-class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicrophoneDelegate {
+class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicrophoneDelegate, POPAnimationDelegate {
+    @IBOutlet weak var postButton: UIButton!
+    @IBOutlet weak var tryLabel: UILabel!
+    @IBOutlet weak var whatLabel: UILabel!
+    @IBOutlet weak var whereLabel: UILabel!
     var lmPath: String!
     var dicPath: String!
     var currentWord: String!
     var openEarsEventsObserver: OEEventsObserver!
-    let words = ["I", "WANT", "TO", "BUY", "APPLES", "AT", "RALPHS", "AM", "DESPERATE", "FOR", "COOKIES", "FROM", "DIDDY", "RIESE"];
+    var animTo = POPBasicAnimation(propertyNamed: kPOPLayerOpacity)
+    var animBack = POPBasicAnimation(propertyNamed: kPOPLayerOpacity)
+    
+//    let words = ["I", "WANT", "TO", "BUY", "APPLES", "AT", "RALPHS", "AM", "DESPERATE", "FOR", "COOKIES", "FROM", "DIDDY", "RIESE"]
+    let words = ["APPLES", "TARGET", "RALPHS", "COOKIES", "DIDDY", "RIESE", "PIZZA", "EIGHT", "HUNDRED", "DEGREES", "WHOLE", "FOODS", "TOOTHPASTE", "SHIRT", "BOILING", "CRAB"]
+    let things = ["APPLES", "COOKIES", "PIZZA", "TOOTHPASTE", "SHIRT"]
+    let locations = ["TARGET", "RALPHS", "DIDDY RIESE", "EIGHT HUNDRED DEGREES", "WHOLE FOODS", "BOILING CRAB"]
     @IBOutlet weak var waveView: ZLSinusWaveView!
     
     override init() {
@@ -30,6 +42,7 @@ class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicropho
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         loadOpenEars()
         startListening()
         waveView.backgroundColor = UIColor.whiteColor()
@@ -37,12 +50,20 @@ class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicropho
         waveView.plotType = EZPlotType.Buffer
         waveView.shouldFill = true
         waveView.shouldMirror = true
-        waveView.maxAmplitude = 0.2
+        waveView.maxAmplitude = 0.4
         EZMicrophone.sharedMicrophone().startFetchingAudio()
         
-//        analyzeText("I am desperate for cookies from Diddy Riese!", completion: {(result) in
-//            println(result)
-//        })
+        animTo.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animTo.fromValue = 0
+        animTo.toValue = 1
+        animTo.duration = 0.5
+        animTo.delegate = self
+        
+        animBack.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        animBack.fromValue = 1
+        animBack.toValue = 0
+        animBack.duration = 0.5
+        animBack.delegate = self
     }
     
     func analyzeText(input: String, completion: (result: [String]) -> Void){
@@ -106,11 +127,80 @@ class PostViewController: UIViewController, OEEventsObserverDelegate, EZMicropho
     
     func pocketsphinxDidReceiveHypothesis(hypothesis: NSString, recognitionScore: NSString, utteranceID: NSString) {
         println("The received hypothesis is \(hypothesis) with a score of \(recognitionScore) and an ID of \(utteranceID)")
-        analyzeText(hypothesis, completion: {(result) in
-            println("\(result)")
-        })
+        let scoreNum = -recognitionScore.doubleValue
+        if scoreNum > 30000 {
+            //TODO: animation
+        }
+        else {
+            let str = hypothesis.stringByReplacingOccurrencesOfString(" ", withString: "") as NSString
+            var whatS, whereS: String?
+            whatS = nil
+            whereS = nil
+            for thing in things {
+                if str.containsString(thing) {
+                    if (whatS == nil) {
+                        whatS = thing
+                    }
+                    else {
+                        whatS = nil
+                        break
+                    }
+                }
+            }
+            if (whatS == nil) {
+                whatLabel.text = "What?"
+            }
+            else {
+                whatLabel.text = whatS
+            }
+            
+            for loc in locations {
+                if str.containsString(loc) {
+                    if (whereS == nil) {
+                        whereS = loc
+                    }
+                    else {
+                        whereS = nil
+                        break
+                    }
+                }
+            }
+            if (whereS == nil) {
+                whereLabel.text = "Where?"
+            }
+            else {
+                whereLabel.text = whereS
+            }
+        }
+        if (whatLabel.text == "What?" || whereLabel.text == "Where?") {
+            animate()
+            postButton.hidden = true
+        }
+        else {
+            postButton.hidden = false
+        }
     }
     
+    func animate() {
+        tryLabel.layer.pop_addAnimation(animTo, forKey: "to")
+    }
+    
+    func animateBack() {
+        tryLabel.layer.pop_addAnimation(animBack, forKey: "back")
+    }
+    
+    @IBAction func postAction(sender: AnyObject) {
+        let alert = SCLAlertView()
+        alert.showSuccess("Posted!", subTitle: "You'll receive a notification when someone would like to grab it for you.", closeButtonTitle: "Got it", duration: NSTimeInterval(5))
+    }
+    
+    func pop_animationDidStop(anim: POPAnimation!, finished: Bool) {
+        if tryLabel.layer.opacity != 0 {
+            animateBack()
+        }
+    }
+    
+    @IBOutlet weak var postAction: UIButton!
     func pocketsphinxDidStartListening() {
         println("Pocketsphinx is now listening.")
     }

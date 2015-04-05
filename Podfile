@@ -9,5 +9,7 @@ target 'GrabItForMe' do
     pod 'SVProgressHUD'
     pod 'EZAudio'
     pod 'ZLSinusWaveView'
+    pod 'VBFPopFlatButton'
+    pod 'SCLAlertView'
 end
 

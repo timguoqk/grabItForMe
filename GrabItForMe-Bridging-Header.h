@@ -19,5 +19,6 @@
 #include <stdlib.h>
 #import "Pods/EZAudio/EZAudio/EZAudio.h"
 #import "Pods/ZLSinusWaveView/ZLSinusWaveView/ZLSinusWaveView.h"
+#import "Pods/VBFPopFlatButton/VBFPopFlatButton/VBFPopFlatButtonClasses/VBFPopFlatButton.h"
 
 #endif
