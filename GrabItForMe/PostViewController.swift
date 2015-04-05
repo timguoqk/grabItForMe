@@ -40,9 +40,20 @@ class PostViewController: UIViewController, OEEventsObserverDelegate {
         request.requestSerializer.headers["X-Mashape-Key"] = "4Kp5Ac8mCnmshn1KN93OfIFcpYzdp1YoKOnjsnIoKo4Af6mUtK"
         request.requestSerializer.headers["Content-Type"] = "application/x-www-form-urlencoded"
         request.responseSerializer = JSONResponseSerializer()
-        request.POST("https://japerk-text-processing.p.mashape.com/phrases/", parameters: params, success: {(response: HTTPResponse) in if let json: AnyObject = response.responseObject { println("\(json)") } },failure: {(error: NSError, response: HTTPResponse?) in println("\(error)") })
-        }
-
+        request.POST("https://japerk-text-processing.p.mashape.com/phrases/", parameters: params, success: {(response: HTTPResponse) in if let text: AnyObject = response.responseObject {
+            
+            var dict = text as NSDictionary
+            var loc = text["LOCATION"] as NSArray
+            var str = loc[0] as NSString // location
+            result.append(str)
+            var good = text["NP"] as NSArray // Array of nouns
+            str = good[2] as NSString
+            result.append(str)
+            } },failure: {(error: NSError, response: HTTPResponse?) in println("\(error)") })
+        return result
+        //FIXME: this is async
+    }
+    
     func initOE() {
         var lmGenerator = OELanguageModelGenerator()
         
