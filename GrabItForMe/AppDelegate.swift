@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var rootVC : UIViewController
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         if NSUserDefaults.standardUserDefaults().boolForKey("HasLaunchedOnce") || PFUser.currentUser() != nil {
-            rootVC = BuyMapViewController()
+            rootVC = DetailTableViewController()
         }
         else {
             rootVC = WelcomeViewController()
